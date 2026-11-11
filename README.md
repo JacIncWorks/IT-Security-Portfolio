@@ -1,75 +1,68 @@
-# IT & Security Portfolio
+# IT Support Development Labs
 
-Welcome to my IT and cybersecurity portfolio! This repository documents my hands-on learning, technical investigations, and practical exercises as I develop skills in IT support, networking, Linux administration, and cybersecurity.
+A hands-on learning portfolio documenting simulated IT support incidents, troubleshooting decisions, diagnostic commands, findings, and lessons learned.
 
-My goal is to build a strong foundation in IT support while continuing to develop the technical and analytical skills needed for a future career in cybersecurity.
+> **Portfolio note:** These are educational simulations completed as part of an independent skills-development program. They are not records of paid employment, real client incidents, or production-system changes.
 
-## Technical Skills
+## Purpose
 
-Through these labs, I have practiced:
+This repository demonstrates a structured approach to entry-level IT support:
 
-- **Linux Fundamentals:** Command-line navigation, process management, service inspection, file permissions, and package verification.
-- **Networking:** TCP/UDP sockets, ports, IP addressing, DNS, multicast DNS (mDNS), and network service discovery.
-- **Windows Investigation:** Process identification, PID-to-network correlation, and examining application traffic.
-- **Security Analysis:** Evaluating processes and services, correlating evidence, interpreting findings, and documenting investigation limitations.
-- **Network Reconnaissance:** Using Nmap to identify services and investigate potential security concerns.
-- **Packet Analysis:** Using Wireshark to inspect DNS queries, UDP traffic, and network protocols.
+- Gather symptoms and establish business impact.
+- Form and test hypotheses rather than jumping to conclusions.
+- Use diagnostic tools and interpret their output.
+- Compare affected and known-good systems where appropriate.
+- Respect authorization, security, and least-privilege boundaries.
+- Escalate with clear evidence when a task exceeds support permissions.
+- Verify the user's outcome and document accurately.
 
-## Projects & Labs
+## Lab Index
 
-### Linux Investigations
-Investigating Linux processes, services, network sockets, permissions, and package information to understand system behavior and evaluate potential security concerns.
+| Lab | Topic | Core skills |
+|---|---|---|
+| [001 — Incident Triage](labs/001-incident-triage.md) | Shared-folder access failure | Scope, prioritization, DNS diagnosis, verification |
+| [002 — Troubleshooting & Escalation](labs/002-troubleshooting-escalation.md) | Intermittent connectivity | Ping tests, fault-domain reasoning, workaround, escalation |
+| [003 — Account Access & Permissions](labs/003-account-access-permissions.md) | Shared-folder access denied after role change | Authentication vs. authorization, groups, ACLs, least privilege |
+| [004 — Network Troubleshooting](labs/004-network-troubleshooting.md) | Internal portal works; public sites fail | IP connectivity, DNS testing, security-policy investigation |
+| [005 — DHCP & IP Configuration](labs/005-dhcp-ip-configuration.md) | Wi-Fi connected, no usable network configuration | APIPA, DHCP lease renewal, gateway, adapter troubleshooting |
+| [006 — DNS Troubleshooting](labs/006-dns-troubleshooting.md) | External websites fail while internal portal works | `ping`, `nslookup`, DNS filtering, endpoint security logs |
+| [007 — Authentication & Account Lockout](labs/007-authentication-account-lockout.md) | Suspicious sign-in attempts and locked account | MFA, authentication logs, incident response, safe recovery |
+| [008 — Windows Performance & Storage](labs/008-windows-performance-storage.md) | Slow workstation and intermittent freezes | Task Manager, Resource Monitor, disk latency, hardware escalation |
 
-[Explore Linux Investigations](Linux-Investigations/)
+## Standard Troubleshooting Workflow
 
-### Network Reconnaissance
-Practicing Nmap scanning, service identification, and security validation in a lab environment.
+1. **Triage:** Identify who is affected, what is unavailable, urgency, and business impact.
+2. **Clarify:** Ask targeted questions and establish what changed.
+3. **Baseline:** Compare with a working device or known-good configuration when useful.
+4. **Test:** Choose diagnostics that distinguish between competing explanations.
+5. **Interpret:** Separate symptoms, evidence, likely causes, and confirmed causes.
+6. **Act safely:** Follow policy, obtain approval, and stay within assigned permissions.
+7. **Verify:** Confirm the original user-facing problem is resolved.
+8. **Document:** Record actions, results, outstanding risks, and escalation ownership.
 
-[Explore Network Reconnaissance Labs](Network-Reconnaissance-Nmap/)
+## Documentation Standards
 
-### Windows Investigations
-Examining Windows processes and correlating process information with network activity using Task Manager, Command Prompt, `netstat`, and Wireshark.
+Each lab contains:
+- Scenario and reported symptoms
+- Initial triage and hypothesis
+- Investigation and evidence
+- Commands or tools used
+- Resolution or escalation
+- Verification
+- Lessons learned
 
-[Explore Windows Investigations](Windows-Investigations/)
+Commands are included as learning references. Run commands only on systems you own or are explicitly authorized to administer. Do not publish passwords, MFA codes, private IP details from real environments, customer data, or confidential company information.
 
-### Lab Environment
-Documenting the Ubuntu virtual machine used for Linux and cybersecurity practice.
+## Skills in Progress
 
-[View Lab Setup](Lab-Setup/)
+This is a developing portfolio. Future labs can add:
+- Windows services and application dependencies
+- Event Viewer investigation
+- Printer troubleshooting
+- User onboarding and offboarding
+- Remote support and professional ticket communication
+- Basic PowerShell diagnostics
 
-## Tools & Technologies
+## About
 
-- Linux / Ubuntu
-- Windows
-- Nmap
-- Wireshark
-- Command Prompt
-- Bash
-- VirtualBox
-- GitHub
-
-## Investigation Approach
-
-I aim to approach technical investigations methodically:
-
-1. Identify the behavior or issue being investigated.
-2. Collect relevant system or network evidence.
-3. Correlate findings across available tools.
-4. Evaluate possible explanations using the evidence.
-5. Document conclusions, uncertainties, and recommended next steps.
-
-I also aim to distinguish observed facts from assumptions and avoid drawing conclusions that the available evidence cannot support.
-
-## Current Learning Goals
-
-- Strengthen Windows and Linux troubleshooting skills.
-- Improve networking fundamentals and packet analysis.
-- Practice Windows event log investigation and authentication analysis.
-- Develop practical IT support and technical problem-solving skills.
-- Build more complete, well-documented security investigations.
-
-## About This Portfolio
-
-These projects are educational lab exercises completed as part of my ongoing technical development. They demonstrate the tools, methods, and reasoning practiced in each investigation; they are not intended to represent professional work experience or comprehensive security audits.
-
-I'm continuously learning, improving my documentation, and adding projects as I develop my skills.
+Independent IT support skills-development project. Labs are simulated and designed to practice practical troubleshooting, documentation, and escalation.
